@@ -1,206 +1,134 @@
-# Hackpad 6x
+# Hackpad 6x :)
 
-Hackpad 6x is a multi-profile macropad designed to act as an all-purpose desktop control pad. Instead of relying on a large number of physical keys, it uses multiple profiles, a rotary encoder, an OLED display, RGB lighting, and PC telemetry to turn a compact set of inputs into a flexible control surface for media, desktop shortcuts, gaming, and numpad functions.
+Hackpad 6x is a small but very over-engineered macropad that I designed because apparently a normal keyboard was not enough :)
 
-The goal of this project was to create an “infinite keys” style macropad: a device where a small number of physical inputs can perform a much larger range of tasks through layers.
+The idea was to make a compact control pad that could do a bit of everything: media controls, shortcuts, gaming controls, numpad functions, and displaying useless (but cool) information from my PC.
 
-Hackpad 6x was designed as an omnipurpose desktop macropad rather than a single-purpose keypad. The focus of the project was flexibility: combining multiple profiles, a rotary encoder, OLED feedback, RGB lighting, and PC-side telemetry to make a compact but highly adaptable control device.
+Basically, I wanted an "infinite keys" macropad where a few buttons could become a lot of buttons through layers.
 
----
-## Quick Start
-
-1. **Build the hardware** — Assemble the macropad using the PCB, case, switches, and other components listed in the BOM
-2. **Flash the firmware** — Install QMK and flash the firmware to the Seeed XIAO RP2040
-3. **Install software** — Set up the HackpadDataLink Python script on your PC
-4. **Configure profiles** — Customize keybinds and OLED graphics as needed
+(Yes, this did start as "I'll just make a simple macropad" and then somehow became OLEDs, RGB, and a PC monitoring system. I have no idea how this happened.)
 
 ---
 
-## Features
+# Quick Start
 
-- Multi-profile layout system for different use cases
-- Rotary encoder with push button for quick control input
-- OLED display with profile-specific graphics and live system information
-- RGB lighting effects with multiple selectable modes
-- Media and desktop shortcut controls
-- Dual numpad layers for keybinds in games or editors when using 60, 65, 70% keyboards etc.
-- Gaming profile for commonly used controls
-- PC telemetry support displaying:
-  - CPU usage
-  - GPU usage
-  - System volume
-  - Display brightness
+To build this:
 
----
+1. **Build the hardware**
+   - Assemble the PCB, switches, encoder, OLED and case.
+   - (Of course you need a soldering iron for soldering. Unfortunately staring at the PCB does not make the components attach themselves.)
 
-## Profiles
+2. **Flash the firmware**
+   - Install QMK and flash the firmware onto the Seeed XIAO RP2040.
 
-Hackpad 6x uses 5 profiles:
-
-- Layer 0 — Home / Base
-- Layer 1 — Media / Screen Control
-- Layer 2 — Numpad A
-- Layer 3 — Numpad B
-- Layer 4 — Gaming
-
+3. **Install HackpadDataLink**
+   - Run the Python script on your PC to send system information to the OLED.
 
 ---
 
-## Hardware
+# Features
 
-Hackpad 6x is built around a Seeed XIAO RP2040 and includes:
+- 5 different profiles/layers
+- Rotary encoder with push button
+- OLED display
+- RGB lighting
+- PC telemetry
 
-- 8 Cherry MX switches
-- 8 keycaps
-- 1 rotary encoder with push button
-- 1 0.91" OLED display
-- 18 RGB LEDs
-- 9 diodes
-- 6 M3 screws
-- 6 M3 heat-set inserts
-- Custom 2-layer PCB
+The PC telemetry shows:
+- CPU usage
+- GPU usage
+- Volume
+- Brightness
+
+(Useful for checking your PC performance without moving your eyes approximately 20cm up to look at your monitor.)
+
+---
+
+# Hardware
+
+The hackpad is built around a Seeed XIAO RP2040.
+
+Parts:
+
+- Seeed XIAO RP2040
+- 8x Cherry MX switches
+- 8x keycaps
+- EC11 rotary encoder
+- OLED display
+- RGB LEDs
+- Custom PCB
 - 3D printed case
 
 ---
 
-## Bill of Materials (BOM)
+# Assembly
 
-| Part                                 | Quantity |
-| ------------------------------------ | -------: | 
-| Seeed XIAO RP2040                    |        1 | 
-| Cherry MX switches                   |        8 |
-| Keycaps                              |        8 |
-| EC11 rotary encoder with push button |        1 |
-| 0.91" OLED display                   |        1 | 
-| RGB LEDs                             |       18 |
-| Diodes                               |        9 |
-| Custom PCB                           |        1 | 
-| 3D printed case (BASE + TOP)         |        1 | 
-| M3 screws                            |        6 | 
-| M3 heatset inserts                   |        6 | 
-| Encoder knob                         |        1 | 
+### PCB Assembly
 
----
+Solder all components onto the PCB:
 
-## Setup & Assembly
+- Diodes
+- RGB LEDs
+- OLED
+- Rotary encoder
+- XIAO RP2040
 
-### Prerequisites
+Please please please check the orientation twice, you won't regret it
 
-- QMK firmware toolchain (https://docs.qmk.fm/newbs)
-- Python 3.7+ (for HackpadDataLink)
-- Git
-- Soldering iron and solder
+### Case Assembly
 
-### Assembly Instructions
-
-1. **PCB Assembly**: Solder all components to the PCB according to the manufacturing files
-   - Install diodes, rotary encoder, and OLED display
-   - Mount the Seeed XIAO RP2040 microcontroller
-
-2. **Switch Installation**: Insert Cherry MX switches into the PCB and secure with keycaps
-
-3. **Case Assembly**: 
-   - Install M3 heatset inserts into the 3D printed case pieces
-   - Assemble top and bottom case pieces
-   - Secure with M3 screws
-
-4. **Testing**: Connect via USB and verify all switches, encoder, and display are working
-
-### Firmware Flashing
-
-1. Clone or download the firmware files from this project
-2. Install QMK: `pip install qmk`
-3. Set up QMK environment: `qmk setup`
-4. Navigate to the firmware directory
-5. Flash to the device: `qmk flash -kb hackpad6x -km default`
-6. Press the reset button on the XIAO RP2040 when prompted
-
-### Software Setup
-
-1. Install Python dependencies: `pip install -r requirements.txt`
-2. Run HackpadDataLink: `python hackpad_datalink.py`
-3. The script will automatically detect and connect to the macropad
+- Install heat-set inserts
+- Screw everything together
 
 ---
 
-## Firmware
+# Firmware
 
 Hackpad 6x uses QMK firmware.
 
 The firmware includes:
 
-- Profile switching
-- Encoder modifier behaviour
-- RGB mode switching
-- OLED profile graphics
-- RAW HID support for PC telemetry
+- Layer switching
+- Encoder controls
+- RGB effects
+- OLED graphics
+- RAW HID PC communication
 
-If you would like to add/edit any layers, you can edit the firmware and modify the OLED profiles included in the "other" folder, covert them into a bitmap, and add them to the code.
-
-### Configuration Guide
-
-**Customizing Keybinds:**
-- Edit the keymap files in the firmware `keymaps` directory
-- Modify keycodes for each layer (0-4)
-- Refer to QMK documentation for available keycodes
-- Re-flash the firmware after making changes
-
-**Customizing OLED Graphics:**
-- Design or edit graphics for each profile
-- Convert images to bitmap format
-- Place bitmap files in the designated folder
-- Update the firmware to reference new graphics
-
-**RGB Lighting:**
-- Modify RGB animations in the firmware configuration
-- Adjust color schemes and animation speeds
-- Changes take effect after re-flashing
+(Translation: lots of C code that compiles, but is so far untested.)
 
 ---
 
-## Hackpad DataLink
+# Hackpad DataLink
 
-A Python script running on the PC sends telemetry values to the macropad over USB, which are then displayed and used by the firmware.
+HackpadDataLink is a Python script that sends PC information to the hackpad.
 
-### Telemetry Values
+Currently supported:
 
 - CPU usage
 - GPU usage
-- Volume percentage
-- Brightness percentage
+- Volume
+- Brightness
+
+(Yes, I made a tiny keyboard display show things my PC already knows)
 
 ---
 
-## Production Files
+# Troubleshooting
 
-The "production" folder contains the manufacturing and build files needed to physically assemble the project:
+If something doesn't work:
 
-- **gerbers.zip** — PCB manufacturing files
-- **case.stl** — Exported printable case parts
+1. Check the wiring
+2. Check the firmware
+3. Check your code
+4. Question your life choices
+5. Realise you forgot to plug in USB
 
----
-
-Images can be found in the "Images" folder.
-
----
-
-## File Structure
-
-hackpad-6x/
-├── firmware/              # QMK firmware source code
-├── hackpad_datalink/      # Python PC telemetry script
-├── production/            # Manufacturing files
-│   ├── gerbers.zip        # PCB manufacturing files
-│   └── case.stl          # 3D printable case parts
-├── other/                 # Additional files
-│   ├── OLED_profiles/     # Profile graphics and bitmaps
-│   └── reference/        # Documentation and design files
-├── images/                # Project photos and diagrams
-README.md                 # you are here :)
-
+(The last step is optional but happens more often than I would like to admit.)
 
 ---
 
-Hackpad 6x was designed and built as a personal project. Special thanks to Hack Club for creating the awesome program behind this!
+Hackpad 6x was built as a personal project to learn PCB design, CAD, QMK firmware, and hardware/software integration.
 
+Huge thanks to Hack Club for making this program possible :)
 
+(Also thanks to Google, Stack Overflow, and whoever wrote the forum post that fixed kicad at 1am.)
