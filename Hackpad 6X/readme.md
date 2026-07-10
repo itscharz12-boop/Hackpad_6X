@@ -13,7 +13,6 @@ Hackpad 6x was designed as an omnipurpose desktop macropad rather than a single-
 2. **Flash the firmware** — Install QMK and flash the firmware to the Seeed XIAO RP2040
 3. **Install software** — Set up the HackpadDataLink Python script on your PC
 4. **Configure profiles** — Customize keybinds and OLED graphics as needed
-5. **Enjoy!** — Use the rotary encoder to switch between profiles
 
 ---
 
