@@ -127,6 +127,11 @@ If something doesn't work:
 
 ---
 
+# AI Usage
+
+AI was used minimally throughout this project. The only instance of AI use was on 4 occasions fixing compile errors in the firmware. This was done with VS code's built in AI. Aside from this, no other AI tools were used in the making of this project.
+
+
 Hackpad 6x was built as a personal project to learn PCB design, CAD, QMK firmware, and hardware/software integration.
 
 Huge thanks to Hack Club for making this program possible :)
