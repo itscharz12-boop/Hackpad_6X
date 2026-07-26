@@ -1,4 +1,4 @@
-# Hackpad 6x :)
+# Hackpad 6x
 
 Hackpad 6x is a small but very over-engineered macropad that I designed because apparently a normal keyboard was not enough :)
 
