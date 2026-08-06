@@ -8,6 +8,9 @@ Basically, I wanted an "infinite keys" macropad where a few buttons could become
 
 (Yes, this did start as "I'll just make a simple macropad" and then somehow became OLEDs, RGB, and a PC monitoring system. I have no idea how this happened.)
 
+Showcase Video (For Hack Club's Stardance event) also available at this link:
+https://drive.google.com/file/d/1NDWkFQftZgt32tnkIbqYFETVVm34cNFE/view?usp=sharing
+
 ---
 
 # Quick Start
