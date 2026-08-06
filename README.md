@@ -8,6 +8,8 @@ Basically, I wanted an "infinite keys" macropad where a few buttons could become
 
 (Yes, this did start as "I'll just make a simple macropad" and then somehow became OLEDs, RGB, and a PC monitoring system. I have no idea how this happened.)
 
+Images of this hackpad can be found in the "images" folder.
+
 Showcase Video (For Hack Club's Stardance event) also available at this link:
 https://drive.google.com/file/d/1NDWkFQftZgt32tnkIbqYFETVVm34cNFE/view?usp=sharing
 
@@ -85,7 +87,7 @@ Please please please check the orientation twice, you won't regret it
 
 ---
 
-# Firmware
+### Firmware
 
 Hackpad 6x uses QMK firmware.
 
@@ -97,11 +99,9 @@ The firmware includes:
 - OLED graphics
 - RAW HID PC communication
 
-(Translation: lots of C code that compiles, but is so far untested.)
-
 ---
 
-# Hackpad DataLink
+### Hackpad DataLink
 
 HackpadDataLink is a Python script that sends PC information to the hackpad.
 
@@ -112,25 +112,9 @@ Currently supported:
 - Volume
 - Brightness
 
-(Yes, I made a tiny keyboard display show things my PC already knows)
-
 ---
 
-# Troubleshooting
-
-If something doesn't work:
-
-1. Check the wiring
-2. Check the firmware
-3. Check your code
-4. Question your life choices
-5. Realise you forgot to plug in USB
-
-(The last step is optional but happens more often than I would like to admit.)
-
----
-
-# AI Usage
+### AI Usage
 
 AI was used minimally throughout this project. The only instance of AI use was on 4 occasions fixing compile errors in the firmware. This was done with VS code's built in AI. Aside from this, no other AI tools were used in the making of this project.
 
