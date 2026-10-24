@@ -11,25 +11,10 @@ Basically, I wanted an "infinite keys" macropad where a few buttons could become
 Images of this hackpad can be found in the "images" folder.
 
 Showcase Video (For Hack Club's Stardance event) also available at this link:
-https://drive.google.com/file/d/1NDWkFQftZgt32tnkIbqYFETVVm34cNFE/view?usp=sharing
+https://drive.google.com/file/d/1zJtfslaftjd1Jd6tR7nyllq0msRzVyGn/view?usp=sharing
 
 ---
 
-# Quick Start
-
-To build this:
-
-1. **Build the hardware**
-   - Assemble the PCB, switches, encoder, OLED and case.
-   - (Of course you need a soldering iron for soldering. Unfortunately staring at the PCB does not make the components attach themselves.)
-
-2. **Flash the firmware**
-   - Install QMK and flash the firmware onto the Seeed XIAO RP2040.
-
-3. **Install HackpadDataLink**
-   - Run the Python script on your PC to send system information to the OLED.
-
----
 
 # Features
 
@@ -44,7 +29,6 @@ The PC telemetry shows:
 - GPU usage
 - Volume
 - Brightness
-
 (Useful for checking your PC performance without moving your eyes approximately 20cm up to look at your monitor.)
 
 ---
@@ -60,7 +44,7 @@ Parts:
 - 8x keycaps
 - EC11 rotary encoder
 - OLED display
-- RGB LEDs
+- 16x RGB LEDs
 - Custom PCB
 - 3D printed case
 
@@ -83,9 +67,7 @@ Please please please check the orientation twice, you won't regret it
 ### Case Assembly
 
 - Install heat-set inserts
-- Screw everything together
-
----
+- put the top plate on the bottom 
 
 ### Firmware
 
@@ -98,6 +80,7 @@ The firmware includes:
 - RGB effects
 - OLED graphics
 - RAW HID PC communication
+  and many more features shown in the video (heres the link again, u should rly watch it: https://drive.google.com/file/d/1zJtfslaftjd1Jd6tR7nyllq0msRzVyGn/view?usp=sharing)
 
 ---
 
@@ -128,13 +111,14 @@ Currently supported:
 
 ### AI Usage
 
-AI was used minimally throughout this project. The only instance of AI use was on 4 occasions fixing compile errors in the firmware. This was done with VS code's built in AI. Aside from this, no other AI tools were used in the making of this project.
+AI was used minimally throughout this project. The only instance of AI use was fixing compile errors in the firmware. This was done with VS code's built in AI, not quite sure what its called. Aside from this, no other AI tools were used in the making of this project.
 
 
-Hackpad 6x was built as a personal project to learn PCB design, CAD, QMK firmware, and hardware/software integration.
+
+Hackpad 6x was built as a personal project to learn PCB design, CAD, QMK firmware, and hardware/software integration. I think this might be the single most electronically complex thing I have ever made.
 
 Huge thanks to Hack Club for making this program possible :)
 
-(Also thanks to Google, Stack Overflow, and whoever wrote the forum post that fixed kicad at 1am.)
+(Also thanks to Google, Stack Overflow, and whoever wrote the forum post that fixed my kicad)
 
 
