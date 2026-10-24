@@ -6,7 +6,7 @@ The idea was to make a compact control pad that could do a bit of everything: me
 
 Basically, I wanted an "infinite keys" macropad where a few buttons could become a lot of buttons through layers.
 
-(Yes, this did start as "I'll just make a simple macropad" and then somehow became OLEDs, RGB, and a PC monitoring system. I have no idea how this happened.)
+(yes, this did start as "I'll just make a simple macropad" and then somehow became OLEDs, RGB, and a PC monitoring system. I have no idea how this happened.)
 
 Images of this hackpad can be found in the "images" folder.
 
