@@ -1,0 +1,6 @@
+hidapi
+psutil
+screen-brightness-control
+nvidia-ml-py
+pycaw
+comtypes
